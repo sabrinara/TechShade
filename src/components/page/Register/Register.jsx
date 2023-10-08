@@ -20,6 +20,12 @@ const Register = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
+                                    <span className="label-text">Profile Picture</span>
+                                </label>
+                                <input type="text" name="photo" placeholder="Give Your Photo" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input type="email" name="email" placeholder="Write Your Email" className="input input-bordered" required />

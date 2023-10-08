@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 
 
 const Login = () => {
-
+    const handleLogin = (e) => {
+        e.preventDefault();
+    }
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -13,7 +15,7 @@ const Login = () => {
 
                     </div>
                     <div className="card flex-shrink-0 w-full md:w-[100rem] max-w-xl shadow-2xl bg-emerald-100">
-                        <form  className="card-body">
+                        <form  className="card-body" onSubmit={handleLogin}>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>

@@ -23,7 +23,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-center">
-                    <Link to="/" className="normal-case text-cyan-900 font-serif font-extrabold text-2xl lg:text-4xl">Tech & Gaming Events</Link>
+                    <Link to="/" className="normal-case text-cyan-800 font-serif font-extrabold text-4xl lg:text-6xl">TechShade</Link>
                 </div>
 
                 <div className="navbar-end">
