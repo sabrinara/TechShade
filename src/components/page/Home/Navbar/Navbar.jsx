@@ -3,12 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink> </li>
-        <li><NavLink to='/login'>Login</NavLink> </li>
+        <li><NavLink to='/login' >Login</NavLink> </li>
         <li><NavLink to='/register'>Register</NavLink> </li>
     </>
     return (
-        <div className="bg-emerald-50">
-            <div className="navbar bg-emerald-50 p-4 ">
+        <div className="bg-emerald-100">
+            <div className="navbar bg-emerald-100 p-4 ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-outline btn-info lg:hidden">
@@ -51,7 +51,7 @@ const Navbar = () => {
 
                 </div>
             </div>
-            <div className="w-full h-[1px] bg-emerald-200 my-2"></div>
+            <div className="w-full h-[1px] bg-cyan-300 my-2"></div>
             <div className="justify-center  hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-6">
                     {navLinks}
