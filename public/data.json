@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "title": "Tech Conferences and Expos",
+      "short_description": "Tech conferences and expos bring together industry leaders, professionals, and enthusiasts to explore the latest technological advancements. Attendees can engage with cutting-edge products, attend informative sessions from thought leaders, and network with like-minded individuals.",
+      "description": "High-performance gaming mouse with customizable RGB lighting.",
+      "price": 490.99,
+      "image": "https://i.ibb.co/nLzMYBr/Tech-conference.jpg",
+      "profile": "https://i.ibb.co/x576xbn/avatar10.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Gaming Conventions",
+      "short_description": "Gaming conventions are gatherings for passionate gamers and industry insiders. Attendees have the opportunity to experience the latest video games, participate in tournaments, and engage with gaming culture.",
+      "description": "Immersive sound experience with noise-cancelling technology.",
+      "price": 1029.99,
+      "image": "https://i.ibb.co/By0bRgJ/Gaming-Conventions.jpg",
+      "profile": "https://i.ibb.co/WDb0Vjr/avatar3.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Hackathons",
+      "short_description": "Hackathons are intense coding events where programmers, developers, and designers collaborate on projects in a short timeframe. Participants work on innovative solutions, often incorporating robotics for projects involving automation, drones, or other hardware-based solutions.",
+      "description": "Mechanical keyboard with tactile switches for precise gaming control.",
+      "price": 979.99,
+      "image": "https://i.ibb.co/Jvct0QN/hackatons2.jpg",
+      "profile": "https://i.ibb.co/37csX8m/avatar13.jpg"
+    },
+    {
+      "id": 4,
+      "title": "E-Sports Events",
+      "short_description": "E-sports events showcase competitive gaming at its highest level. Professional teams and players compete in tournaments, and fans can watch live matches. Robotics might be featured in tech-driven events where cutting-edge technologies enhance the gaming experience or in the development of AI opponents for players.",
+      "description": "Ultra-fast refresh rate for smooth gaming visuals.",
+      "price": 2099.99,
+      "image": "https://i.ibb.co/1ZqJKt1/E-Sports.jpg",
+      "profile": "https://i.ibb.co/znBD4hp/avatar1.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Virtual Events",
+      "short_description": "Virtual events encompass a wide range of online gatherings, from virtual conferences to digital expos. Attendees can participate from anywhere in the world, engaging in live-streamed sessions, virtual networking, and interactive experiences.",
+      "description": "Ergonomic design for long gaming sessions.",
+      "price": 1999.99,
+      "image": "https://i.ibb.co/YL97ckS/virtual-reality.jpg",
+      "profile": "https://i.ibb.co/zX0y5Gq/avatar12.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Robotics Events",
+      "short_description": "To celebrate and explore the latest advancements in the field of robotics. These events bring together engineers, researchers, and enthusiasts to showcase cutting-edge robotic technologies, share knowledge, and foster collaboration.",
+      "description": "Immersive virtual reality experience for gaming and entertainment.",
+      "price": 2399.99,
+      "image": "https://i.ibb.co/sVrcrwS/children-making-robot.jpg",
+      "profile": "https://i.ibb.co/Tw9vnsc/avatar14.jpg"
+    }
+  ]
+  
