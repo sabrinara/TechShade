@@ -4,21 +4,14 @@ import ServiceDetailPage from "./ServiceDetailPage";
 
 
 const Service = () => {
-    const [service, setService] = useState();
+
     const services = useLoaderData();
-    // console.log('service',services);
     const {id} = useParams();
-
-    useEffect(() => {
-        const detail = services?.find(service => service.id === id)
-        setService(detail);
-        // console.log('asvsdv',detail);
-    }, [id, services]);
-
-
+    const idInt = parseInt(id);
+    const detail = services?.find(service => service.id === idInt);
     return (
         <div>
-            <ServiceDetailPage service={service} ></ServiceDetailPage>
+            <ServiceDetailPage service={detail} ></ServiceDetailPage>
         </div>
     );
 };
