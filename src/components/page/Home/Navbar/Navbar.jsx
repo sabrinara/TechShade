@@ -11,11 +11,23 @@ const Navbar = () => {
                 console.error(error);
             });
     }
-    const navLinks = <>
-        <li><NavLink to='/'>Home</NavLink> </li>
-        <li><NavLink to='/login' >Login</NavLink> </li>
-        <li><NavLink to='/register'>Register</NavLink> </li>
-    </>
+    const navLinks = (
+        <>
+            <li>
+                <NavLink to="/">Home</NavLink>
+            </li>
+            { !user && (
+                <>
+                    <li>
+                        <NavLink to="/login">Login</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/register">Register</NavLink>
+                    </li>
+                </>
+            )}
+        </>
+    );
     return (
         <div className="bg-emerald-100">
             <div className="navbar bg-emerald-100 p-4 ">
@@ -37,12 +49,12 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <div className="flex-none gap-2">
-                {
-                    user ?
-                        
-                            <div className="dropdown dropdown-end">
-                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-10 rounded-full">
+                        {
+                            user ?
+
+                                <div className="dropdown dropdown-end">
+                                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                        <div className="w-10 rounded-full">
                                             <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                                         </div>
                                     </label>
@@ -58,10 +70,10 @@ const Navbar = () => {
 
                                 :
                                 <Link to="/login" className="btn btn-outline btn-info">Login</Link>
-               
-                }
-                            </div>
-                        </div>
+
+                        }
+                    </div>
+                </div>
             </div>
             <div className="w-full h-[1px] bg-cyan-300 my-2"></div>
             <div className="justify-center  hidden lg:flex">
