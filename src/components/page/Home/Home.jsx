@@ -1,5 +1,6 @@
+
+import ContactUs from "../ContactUs";
 import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
 import Services from "./Services/Services";
 import Testimonial from "./Testimonial/Testimonial";
 import { useEffect, useState } from "react";
@@ -20,6 +21,7 @@ const Home = () => {
         <div className="font-roboto">
             <Header></Header>
             <Services services={service}></Services>
+            <ContactUs></ContactUs>
             <Testimonial></Testimonial>
             
         </div>
