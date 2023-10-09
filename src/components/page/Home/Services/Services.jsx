@@ -4,7 +4,7 @@ import ServiceCard from "./ServiceCard";
 import { useEffect } from 'react';
 
 const Services = ({ services }) => {
-    // Initialize AOS
+   
     useEffect(() => {
         AOS.init({
             duration: 1500,
