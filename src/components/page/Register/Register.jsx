@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
@@ -7,56 +7,55 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
-    const { createUser, googleSignIn } = useContext(AuthContext);
+    const { createUser, googleSignIn, handleUpdateProfile } = useContext(AuthContext);
+    const navigate = useNavigate();
+
    
 
-    const handleRegister = (e) => {
+    const handleRegister = async (e) => {  // Using async function to handle promises
         e.preventDefault();
-        console.log(e.currentTarget);
+
         const form = new FormData(e.currentTarget);
         const name = form.get('name');
         const photo = form.get('photo');
         const email = form.get('email');
         const password = form.get('password');
         const accepted = e.target.terms.checked;
-        console.log(name, photo, email, password, accepted);
 
-        
-        if (password.length < 6) {
-          toast('Password must be at least 6 characters or longer');
-            return;
-        }
-        else if (!/[A-Z]/.test(password)) {
-            toast('Password must contain at least one uppercase letter');
-            return;
-        }
-        else if (!/^(?=.*[A-Z])(?=.*\W).*$/.test(password)) {
-            toast('Password must contain at least one special character');
-            return;
-        }
-        else if (!accepted) {
-            toast('You must accept our terms and conditions');
-            return;
-        }
+        try {
+            if (password.length < 6) {
+                throw new Error('Password must be at least 6 characters or longer');
+            } else if (!/[A-Z]/.test(password)) {
+                throw new Error('Password must contain at least one uppercase letter');
+            } else if (!/^(?=.*[A-Z])(?=.*\W).*$/g.test(password)) {
+                throw new Error('Password must contain at least one special character');
+            } else if (!accepted) {
+                throw new Error('You must accept our terms and conditions');
+            }
 
-        createUser(email, password)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-                toast('Successfully Register');
-            })
-            .catch(error => {
-                console.error(error);
-                toast('Already have an account');
-            })
+            // Await createUser and handleUpdateProfile
+            await createUser(email, password);
+            await handleUpdateProfile(name, photo);
+
+            // If both promises resolve successfully, show success toast and navigate
+            toast.success('Successfully Registered');
+            navigate('/');
+        } catch (error) {
+            // If any error occurs, show an error toast
+            toast.error(error.message);
+        }
     }
     const handleGoogleSignUp = () => {
         googleSignIn()
             .then((result) => {
                 console.log(result.user)
+                toast('Successfully Login');
 
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                console.error(error);
+                toast('Login failed. Please check your email and password.');
+            });
     }
     return (
         <div>
@@ -78,7 +77,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Profile Picture</span>
                                 </label>
-                                <input type="text" name="photo" placeholder="Give Your Photo" className="input input-bordered" required />
+                                <input type="text" name="photo" placeholder="PhotoUrl" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">

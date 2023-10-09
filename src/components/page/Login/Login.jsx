@@ -1,4 +1,4 @@
-import { useContext} from "react";
+import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
@@ -10,7 +10,7 @@ const Login = () => {
     const { signIn, googleSignIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
- 
+
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -26,8 +26,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 toast('Successfully Login');
-
-                navigate(location?.state ? location.state : '/')
+                navigate('/')
             })
             .catch(error => {
                 console.error(error);
@@ -38,7 +37,7 @@ const Login = () => {
         googleSignIn()
             .then((result) => {
                 console.log(result.user)
-               toast('Successfully Login');
+                toast('Successfully Login');
 
             })
             .catch(error => {
@@ -76,7 +75,7 @@ const Login = () => {
                             </div>
 
                         </form>
-                       
+
                         <div className="flex flex-col items-center justify-center mb-6">
                             <p className="text-[15px]">New in the Website? Please<Link to="/register"><button className="p-1 text-blue-700 font-bold">Register</button></Link></p>
                             <p>Or sign up with<button onClick={handleGoogleSignIn} className="btn bg-emerald-100 text-blue-700 font-bold"><FaGoogle></FaGoogle>Google</button></p>
