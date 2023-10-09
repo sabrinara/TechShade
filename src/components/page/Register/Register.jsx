@@ -1,7 +1,30 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 
 const Register = () => {
+
+    const { createUser } = useContext(AuthContext);
+    const handleRegister = (e) => {
+        e.preventDefault();
+        console.log(e.currentTarget);
+        const form = new FormData(e.currentTarget);
+        const name = form.get('name');
+        const photo = form.get('photo');
+        const email = form.get('email');
+        const password = form.get('password');
+        console.log(name, photo, email, password);
+
+        createUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch (error => {
+            console.error(error);
+        })
+    }
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -11,7 +34,7 @@ const Register = () => {
 
                     </div>
                     <div className="card flex-shrink-0 w-full md:w-[100rem] max-w-xl shadow-2xl bg-emerald-100">
-                        <form className="card-body">
+                        <form className="card-body" onSubmit={handleRegister}>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
@@ -40,7 +63,7 @@ const Register = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-4">
-                                <button className="p-3 bg-blue-600 text-white rounded-md">Login</button>
+                                <button className="p-3 bg-blue-600 text-white rounded-md">Register</button>
                             </div>
                             <div className="block">
                                 <p className="text-[15px]">Already have an account? Please<Link to="/login"><button className="p-1 text-blue-700 font-bold">Login</button></Link> <br />Or sign in with<button className="p-1 text-blue-700 font-bold">Google</button></p>

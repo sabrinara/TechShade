@@ -21,7 +21,7 @@ const Home = () => {
             <Header></Header>
             <Services services={service}></Services>
             <Testimonial></Testimonial>
-            <Footer></Footer>
+            
         </div>
     );
 };
