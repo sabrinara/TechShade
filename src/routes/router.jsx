@@ -7,6 +7,7 @@ import Register from '../components/page/Register/Register';
 import Service from '../components/page/Home/Services/ServiceDetail/Service';
 import PrivateRouters from './PrivateRoutes';
 import FQA from '../components/page/FQA/FQA';
+import Detail from '../components/page/Details/Detail';
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: "/fqa",
                 element:<PrivateRouters><FQA></FQA></PrivateRouters>,
+            },
+            {
+                path:"/detail",
+                element:<PrivateRouters><Detail></Detail></PrivateRouters>
             }
         ]
     }

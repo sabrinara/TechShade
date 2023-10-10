@@ -20,6 +20,10 @@ const Navbar = () => {
 
             {user ?
                 <>
+                   
+                    <li>
+                        <NavLink to = "/detail">Packages</NavLink>
+                    </li> 
                     <li>
                         <NavLink to="/fqa">FQA</NavLink>
                     </li>

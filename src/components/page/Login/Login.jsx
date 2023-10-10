@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
 
     const { signIn, googleSignIn } = useContext(AuthContext);
-    const location = useLocation();
     const navigate = useNavigate();
 
 
