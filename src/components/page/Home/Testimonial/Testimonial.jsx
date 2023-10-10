@@ -4,17 +4,17 @@ const Testimonial = () => {
     const testimonials = [
         {
             image: "https://i.ibb.co/Tw9vnsc/avatar14.jpg",
-            text: "I had an amazing experience with this people! Their team helped me organize a flawless event that exceeded all my expectations.",
+            text: "I had an amazing experience with TechShade! Their team helped me organize a flawless event that exceeded all my expectations.",
             author: "Jessica Brown",
         },
         {
             image: "https://i.ibb.co/WDb0Vjr/avatar3.jpg",
-            text: "This people made event planning so easy and stress-free.Their attention to detail and creative ideas made our event truly special.",
+            text: "TechShade made event planning so easy and stress-free.Their attention to detail and creative ideas made our event truly special.",
             author: "Smith Williams",
         },
         {
             image: "https://i.ibb.co/znBD4hp/avatar1.jpg",
-            text: "I can't thank them enough for making my dream wedding a reality. From venue selection to decorations, everything was perfect.",
+            text: "I can't thank TechShade enough for making my dream wedding a reality. From venue selection to decorations, everything was perfect.",
             author: "Emma Watson",
         },
     ];

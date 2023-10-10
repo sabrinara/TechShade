@@ -9,7 +9,7 @@ const Detail = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-cyan-900">Our Packages</h2>
             <div className="grid grid-cols-1 gap-10 m-6 md:m-14 lg:m-16 ">
 
-                <div className="card lg:h-[26rem]  lg:card-side bg-base-100 shadow-xl ">
+                <div className="card  lg:card-side bg-base-100 shadow-xl ">
                     <div className="card-body  ">
                         <h2 className="card-title justify-center text-3xl pt-6 font-bold">Normal </h2>
                         <p className="text-lg md:px-16 mt-4 ">For small outdoor games,workshops,seminar or career planning events. Where maximum capacity is 300 people. Venue can be indoor or outdoor. Our volunteer team will assist you in planning your event.We will consider your thoughts and decor the event. Standard event coordination. Basic event promotion. Basic registration services.
@@ -36,7 +36,7 @@ const Detail = () => {
                     </div>
                 </div>
 
-                <div className="card lg:h-[26rem]  lg:card-side bg-base-100 shadow-xl ">
+                <div className="card  lg:card-side bg-base-100 shadow-xl ">
                     <div className="card-body  ">
                         <h2 className="card-title justify-center text-3xl pt-6 font-bold">Premium </h2>
                         <p className="text-lg md:px-16 mt-4 ">In this type of package medium range workshops, hackathon and career planning events. Where maximum capacity is 500 people. Venue can be indoor or outdoor. Venue can be indoor or Outdoor as client wishes.
@@ -67,7 +67,7 @@ const Detail = () => {
                     </div>
                 </div>
 
-                <div className="card lg:h-[26rem]  lg:card-side bg-base-100 shadow-xl ">
+                <div className="card  lg:card-side bg-base-100 shadow-xl ">
                     <div className="card-body  ">
                         <h2 className="card-title justify-center text-3xl pt-6 font-bold">Platinum </h2>
                         <p className="text-lg md:px-16 mt-4 ">In this type of package medium to large range seminar, workshops, hackathon, and career planning events. Where maximum capacity is 1500 people. Venue can be indoor or outdoor. Venue can be indoor or Outdoor as client wishes.
@@ -88,7 +88,7 @@ const Detail = () => {
                                 <li>Full-service coffee and snack breaks.</li>
                             </ul>
 
-                            <br /><b className="text-cyan-900">Special Service:</b> 
+                            <br /><b className="text-cyan-900">Special Service:</b>
                             <ul>
                                 <li>VIP event coordinator.</li>
                                 <li>Extensive event promotion with personalized outreach.</li>
@@ -99,7 +99,7 @@ const Detail = () => {
                             <b className="text-cyan-900 font-bold">Price: 1500.00 $</b> </p>
                     </div>
                 </div>
-                <div className="card lg:h-[26rem]  lg:card-side bg-base-100 shadow-xl ">
+                <div className="card  lg:card-side bg-base-100 shadow-xl ">
                     <div className="card-body  ">
                         <h2 className="card-title justify-center text-3xl pt-6 font-bold">Diamond </h2>
                         <p className="text-lg md:px-16 mt-4 ">In this type of package any range workshops,indoor games, meetup, seminar,robotic competions, hackathon and career planning events. Where maximum capacity of people is as client request. Venue is mostly indoor. Networking and technical support is also provided.
@@ -119,8 +119,8 @@ const Detail = () => {
                                 <li>24/7 catering services with private dining options.</li>
                                 <li>Celebrity chef experiences.</li>
                             </ul>
-                           
-                            <br /><b className="text-cyan-900">Special Service:</b> 
+
+                            <br /><b className="text-cyan-900">Special Service:</b>
                             <ul className="list-disc ml-8">
                                 <li>Dedicated event concierge.</li>
                                 <li>Exclusive and extensive event promotion.</li>

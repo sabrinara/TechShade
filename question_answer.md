@@ -20,7 +20,8 @@ console.log(greetign);
 
 #### Answer: 
 - C 
-- The correct answer is undefined<br/> variable is not declared
+- The correct answer is undefined<br/> variable is not declared.<br/>
+Here, greeting is declared variable.
 
 
 <i>Write your explanation here</i>
@@ -75,7 +76,7 @@ console.log(food);
 
 #### Answer: 
 - A
-- The correct answer is A<br/>info variable is not declared in output
+- The correct answer is A<br/>because food variable is consol.log as output
 
 <i>Write your explanation here</i>
 
@@ -102,7 +103,7 @@ console.log(sayHi());
 
 #### Answer: 
 - B
-- The correct answer is B<br/> name is not declared
+- The correct answer is B<br/> Function have no arguments. <br/>So name wouln't pass
 
 <i>Write your explanation here</i>
 
@@ -132,7 +133,7 @@ console.log(count);
 
 #### Answer: 
 - C 
-- The correct answer is C<br/> because count is the output and it is incremented
+- The correct answer is C<br/> because count is the output <br/>and it is incremented
 
 <i>Write your explanation here</i>
 
